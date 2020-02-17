@@ -1,0 +1,7 @@
+{
+    "name": "formulario-con-validacion",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "^1.0.4"
+    }
+}
