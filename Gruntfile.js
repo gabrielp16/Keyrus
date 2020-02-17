@@ -1,17 +1,11 @@
-'use strict';
-
-var src = 'src';
-var dest = 'dist';
-
 module.exports = function (grunt) {
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
         concat: {
             dist: {
                 src: [
-                    'js/libs/*.js', // All JS in the libs folder
-                    '/js/global.js' // This specific file
+                    'js/libs/*.js'
                 ],
                 dest: '/js/build/production.js',
             }
@@ -22,23 +16,17 @@ module.exports = function (grunt) {
                 dest: '/js/build/production.min.js'
             }
         },
-        sass: { // Task
-            dist: { // Target
-                options: { // Target options
-                    style: 'expanded'
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'styles',
-                    src: ['*.scss'],
-                    dest: '../public',
-                    ext: '.css'
-                }]
+
+        sass: {
+            dist: {
+                files: {
+                    'app/styles/css/styles.css': 'app/styles/scss/styles.scss'
+                }
             }
         },
         watch: {
             css: {
-                files: '**/*.sass',
+                files: '**/*.scss',
                 tasks: ['sass']
             }
         },
@@ -49,16 +37,18 @@ module.exports = function (grunt) {
                     tasks: ['availabletasks', 'tasks']
                 }
             }
-        },
+        }
     });
 
+    // Plugins
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.loadNpmTasks('grunt-available-tasks');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
+    // Tasks
+    grunt.registerTask('default', ['concat', 'sass', 'uglify']);
     grunt.registerTask('tasks', ['availabletasks']);
 };
