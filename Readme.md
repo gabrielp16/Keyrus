@@ -10,7 +10,7 @@ Junto con herramientas de compilacion y prepocesamiento como:
 ## Development
 
 En la terminal ejecutar este comando: 
-`git clone https://github.com/gabrielp16/AngularMEAN.git`.
+`git clone https://github.com/gabrielp16/Keyrus.git`.
 
 Luego ejecutar el comando `npm install` para iniciar la instalacion de los modulos node_modules.
 
