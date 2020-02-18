@@ -9,9 +9,17 @@ Junto con herramientas de compilacion y prepocesamiento como:
 
 ## Development
 
-En la terminal ejecutar este comando: 
-`git clone https://github.com/gabrielp16/Keyrus.git`.
+### Pasos para ejecutar el proyecto
 
-Luego ejecutar el comando `npm install` para iniciar la instalacion de los modulos node_modules.
-
-En la carpeta `\Keyrus\app` se encuentra el archivo `index.html`, el cual es el punto de inicio del proyecto, hacer clic sobre el archivo.
+    * Tener la ubicación donde se clonará el proyecto.
+    * Una vez se encuentre en la carpeta donde se clonará el proyecto, abrir una terminal con ésta ubicación.
+    * En la terminal ejecutar este comando:
+    ```
+    git clone https://github.com/gabrielp16/Keyrus.git
+    ```
+    * Luego ejecutar el comando para iniciar la instalacion de los modulos node_modules.
+    ```
+    npm install
+    ```
+    * En la carpeta `\Keyrus\app` se encuentra el archivo `index.html`, el cual es el punto de inicio del proyecto.
+    * Hacer doble clic sobre el archivo.
