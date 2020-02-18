@@ -18,7 +18,7 @@ Junto con herramientas de compilacion y prepocesamiento como:
     ```
     git clone https://github.com/gabrielp16/Keyrus.git
     ```
-4. Luego ejecutamos el comendo para ingresar a la carpeta `Keyrus`.
+4. Luego ejecutamos el comando para ingresar a la carpeta `\Keyrus`.
     ```
     cd Keyrus/
     ```
