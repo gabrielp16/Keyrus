@@ -2,9 +2,10 @@
 
 Este proyecto esta desarrollado con HTML5, SCSS, Javascript.
 Junto con herramientas de compilacion y prepocesamiento como:
-    -   Grunt:      V1.0.4
-    -   Grunt-cli:  V1.2.0
-    -   Node:       V10.15.2
+
+*   Grunt:      V1.0.4
+*   Grunt-cli:  V1.2.0
+*   Node:       V10.15.2
 
 
 ## Development
