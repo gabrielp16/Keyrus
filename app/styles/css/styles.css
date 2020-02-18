@@ -1,45 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap");
 html,
 body {
-  height: 100%;
-}
+  height: 100%; }
+  html *,
+  body * {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none; }
 
 body {
   display: -ms-flexbox;
   display: flex;
+  min-width: 430px;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: #f5f5f5;
-}
-body .form-signin {
-  width: 100%;
-  max-width: 331px;
-  padding: 16px;
-  margin: auto;
-}
-body .form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-body .form-signin .form-control:focus {
-  z-index: 2;
-}
-body .form-signin .checkbox {
-  font-weight: 400;
-}
-body .form-signin input[type=email] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-body .form-signin input[type=password] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+  background-image: url(../../images/bg_pattern.jpg); }
+  body .form-signin {
+    width: 100%;
+    max-width: 230px;
+    padding: 30px 80px;
+    margin: 0 auto 20px;
+    background-color: #fbfbfb;
+    border: 1px solid #c8c8c8;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 1px 1px 2px #ccc; }
+    body .form-signin h5 {
+      font-weight: bold;
+      color: #939797;
+      letter-spacing: -1px; }
+    body .form-signin .leaf {
+      width: 100%;
+      display: inline-flex;
+      background-color: #fbfbfb;
+      border: 1px solid #c8c8c8;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      position: absolute;
+      left: 0;
+      height: 60px;
+      z-index: -1;
+      left: -1px;
+      box-shadow: 1px 1px 2px #ccc; }
+      body .form-signin .leaf.one {
+        bottom: -7px; }
+      body .form-signin .leaf.two {
+        bottom: -4px; }
+    body .form-signin .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 5px 40px 5px 10px;
+      margin: 0 0 6px 0;
+      color: #7a7e82;
+      font-weight: 200;
+      font-size: 16px;
+      z-index: 1;
+      border: 1px solid #f2f1f1;
+      background-color: #f7f6f6;
+      -moz-box-shadow: inset -1px 1px 3px #eee;
+      -webkit-box-shadow: inset -1px 1px 3px #eee;
+      box-shadow: inset -1px 1px 3px #eee; }
+      body .form-signin .form-control::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #a09f9f;
+        font-size: 14px;
+        font-weight: 300; }
+      body .form-signin .form-control::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #a09f9f;
+        font-size: 14px;
+        font-weight: 300; }
+      body .form-signin .form-control:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #a09f9f;
+        font-size: 14px;
+        font-weight: 300; }
+      body .form-signin .form-control:-moz-placeholder {
+        /* Firefox 18- */
+        color: #a09f9f;
+        font-size: 14px;
+        font-weight: 300; }
+      body .form-signin .form-control:focus {
+        z-index: 2; }
+    body .form-signin .custom-control-label::before {
+      box-shadow: inset 0px 0px 4px #bcbcbc; }
+    body .form-signin .input-icon {
+      color: #e2e1e1;
+      font-size: 14px;
+      position: absolute;
+      right: 17px;
+      top: 8px;
+      z-index: 2; }
+    body .form-signin .login-button {
+      width: 116px;
+      height: 40px;
+      margin: 10px auto;
+      border-radius: 3px;
+      background-color: #2993de;
+      border: 1px solid #0f578a;
+      box-shadow: 0 1px 2px #ccc;
+      box-sizing: border-box;
+      line-height: normal;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #1c6497; }
+      body .form-signin .login-button:hover {
+        background-color: #0b67a8; }
+    body .form-signin .checkbox {
+      font-weight: 400; }
+      body .form-signin .checkbox label {
+        color: #939797;
+        font-size: 12px;
+        text-shadow: 1px 1px 0 #ddd;
+        line-height: 26px; }
+  body .links {
+    color: #787878;
+    text-decoration: underline; }
+    body .links.first {
+      font-size: 14px;
+      font-weight: 600; }
+    body .links.second {
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration: none; }
+    body .links span {
+      color: #2993de; }
+      body .links span:hover {
+        color: #1571b2; }
+  body .trademark {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto; }
+    body .trademark span {
+      width: 30px;
+      height: 30px;
+      background-color: #7b7b7b;
+      display: inline-block;
+      line-height: 30px;
+      color: #fff;
+      box-shadow: 1px 1px 1px #fff; }
+    body .trademark h1 {
+      display: inline-block;
+      width: calc(100% - 40px);
+      height: 30px;
+      background: #fff;
+      font-size: 12px;
+      line-height: 33px;
+      color: #b6b6b6;
+      font-style: italic;
+      margin: 0;
+      box-shadow: 1px 1px 1px #e0e0e0; }
+      body .trademark h1 a {
+        text-decoration: none;
+        color: #b6b6b6; }
+        body .trademark h1 a:hover {
+          color: #1571b2; }
 
 /*# sourceMappingURL=styles.css.map */

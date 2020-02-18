@@ -14,24 +14,57 @@
 <body>
     <div class="container text-center">
         <form class="form-signin">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
-                autofocus="">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
+            <h5 class="mb-3">Entrar na minha conta</h5>
+            <div class="input-group">
+                <label for="inputEmail" class="sr-only">Email</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+                <span class="input-icon">
+                    <em class="fas fa-user"></em>
+                </span>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
-            <span style="font-size: 3em; color: Tomato;">
-                <em class="fas fa-camera"></em>
-            </span>
+            <div class="input-group">
+                <label for="inputPassword" class="sr-only">Senha</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                <span class="input-icon">
+                    <em class="fas fa-lock"></em>
+                </span>
+            </div>
 
+            <div class="wrap-login-button">
+                <button class="btn btn-lg btn-primary btn-block login-button" type="submit">Entrar</button>
+                <div class="checkbox col-auto my-1">
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                        <label class="custom-control-label" for="customControlAutosizing">Mantenha-me conectado</label>
+                    </div>
+                </div>
+            </div>
+            <div class="leaf one"></div>
+            <div class="leaf two"></div>
         </form>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 offset-md-3">
+                    <a href="#" class="links first">Precisa de uma conta? <span>Inscrever-se</span></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 offset-md-3">
+                    <a href="#" class="links second">Esqueceu sua senha? <span>Clique aqui.</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-trademark mt-5">
+            <div class="row">
+                <div class="trademark">
+                    <span>i</span>
+                    <h1>
+                        <a href="https://www.keyrus.com/co/">Keyrus</a>
+                    </h1>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./../node_modules/jquery/dist/jquery.js"></script>

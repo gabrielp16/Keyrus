@@ -1,0 +1,13 @@
+@import '../scss/variables';
+
+@mixin box-sizing {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+@mixin border-radius($round) {
+    -moz-border-radius: $round;
+    -webkit-border-radius: $round;
+    border-radius: $round;
+}
