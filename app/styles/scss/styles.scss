@@ -17,6 +17,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
     background-color: #f5f5f5;
+    position: relative;
     background-image: url(../../images/bg_pattern.jpg);
 
     .form-signin {
@@ -194,5 +195,14 @@ body {
                 }
             }
         }
+    }
+
+    .alert {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 20px);
+        margin: 10px;
+        box-sizing: border-box;
     }
 }
