@@ -1,50 +1,66 @@
 $(function () {
+    const elementAlert = $(".alert");
     const emailField = $('#inputEmail');
-    const passField = $('#inputPassword');
     const loginButton = $('button[type=submit]');
+    const passField = $('#inputPassword');
 
     let messageObj = {};
 
     function emptyFields() {
-        if (_.isEmpty(emailField.value || _.isEmpty(passField.value))) {
-            isValid = false;
+        let fullFields = true;
+        if (_.isEmpty(emailField.val()) || _.isEmpty(passField.val())) {
+            fullFields = false;
         }
+
+        return fullFields;
     }
 
     function emailIsValid(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
     function validation() {
+        let fullFields = emptyFields();
+        let emailValid = emailIsValid(emailField.val());
 
-        isValid = emptyFields();
-
-        if (isValid) {
+        if (fullFields && emailValid) {
             messageObj = {
-                text: 'Você foi logado com sucesso',
                 class: 'alert-success',
-                type: 'success'
-            }
+                icon: 'fas fa-check',
+                text: 'Você foi logado com sucesso'
+            };
         } else {
             messageObj = {
-                text: 'Digite seu email e senha',
                 class: 'alert-danger',
-                type: 'failure'
-            }
+                icon: 'fas fa-times',
+                text: 'Digite seu email e senha'
+            };
         }
 
         showMessage(messageObj);
     }
 
     function showMessage(messageObj) {
-        $(".alert p").text(messageObj.text);
-        $(".alert").toggleClass('show hide').addClass(messageObj.class);
+        elementAlert.find("p").text(messageObj.text);
+        elementAlert.find("em").removeAttr('class').addClass(messageObj.icon);
+        elementAlert
+            .removeClass('alert-success alert-danger show hide')
+            .addClass(messageObj.class)
+            .addClass('show');
+
         setTimeout(function () {
-            $(".alert").toggleClass('hide show');
-        }, 3000);
+            elementAlert
+                .removeClass('show')
+                .addClass('hide');
+        }, 4000);
     }
 
-    loginButton.on('click', validation);
+    loginButton.on('click', function () {
+        elementAlert
+            .removeClass('hide show');
+
+        validation();
+
+        return false;
+    });
 });
-
-
